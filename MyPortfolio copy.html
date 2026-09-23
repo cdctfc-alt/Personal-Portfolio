@@ -203,6 +203,14 @@
             margin-bottom: 20px;
 
             font-weight: bold;
+
+            overflow: hidden;
+        }
+
+        .profile-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .profile-card h3 {
@@ -316,6 +324,16 @@
             color: #38bdf8;
         }
 
+        .skill-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            color: #94a3b8;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
 
         /* =========================
            PROJECTS
@@ -341,15 +359,50 @@
 
             border-radius: 12px;
 
-            padding: 30px;
+            padding: 20px;
 
             transition: 0.3s;
+
+            overflow: hidden;
         }
 
         .project-card:hover {
             transform: translateY(-8px);
             border-color: #38bdf8;
         }
+
+
+        /* =========================
+           PROJECT IMAGES
+        ========================= */
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+
+            object-fit: cover;
+
+            display: block;
+
+            border-radius: 10px;
+
+            margin-bottom: 20px;
+
+            border: 1px solid #1e3a5f;
+
+            background: #0b1120;
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.02);
+        }
+
+
+        /* =========================
+           PROJECT INFORMATION
+        ========================= */
 
         .project-number {
             color: #38bdf8;
@@ -361,6 +414,7 @@
 
         .project-card h3 {
             margin-bottom: 12px;
+            font-size: 20px;
         }
 
         .project-card p {
@@ -536,7 +590,6 @@
 
             .hero {
                 flex-direction: column;
-
                 text-align: center;
             }
 
@@ -571,6 +624,10 @@
                 padding: 15px 5%;
             }
 
+            .logo {
+                font-size: 18px;
+            }
+
             .nav-links {
                 gap: 10px;
             }
@@ -603,6 +660,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .project-image {
+                height: 220px;
+            }
+
             section {
                 padding: 70px 5%;
             }
@@ -632,7 +693,7 @@
     <nav>
 
         <div class="logo">
-           MyPortfolio
+            My<span>Portfolio</span>
         </div>
 
         <ul class="nav-links">
@@ -680,7 +741,6 @@
 
             <h1>
                 Christian Dave C. Flores
-               
             </h1>
 
             <h2>
@@ -696,15 +756,11 @@
 
             <div class="buttons">
 
-                <a
-                    href="#projects"
-                    class="btn primary">
+                <a href="#projects" class="btn primary">
                     View My Projects
                 </a>
 
-                <a
-                    href="#contact"
-                    class="btn secondary">
+                <a href="#contact" class="btn secondary">
                     Contact Me
                 </a>
 
@@ -713,14 +769,25 @@
         </div>
 
 
-        <!-- PROFILE -->
+        <!-- PROFILE CARD -->
 
         <div class="profile-card">
 
             <div class="profile-circle">
 
-                YOUR<br>
-                PHOTO
+                <!--
+                    OPTIONAL PROFILE PHOTO
+
+                    Put your profile picture inside the images folder
+                    and change the filename below.
+
+                    Example:
+                    images/profile.jpg
+                -->
+
+                <img
+                    src="images/img.jpg.png"
+                    alt="Christian Flores">
 
             </div>
 
@@ -741,9 +808,7 @@
          ABOUT
     ========================= -->
 
-    <section
-        class="about"
-        id="about">
+    <section class="about" id="about">
 
         <div class="section-title">
 
@@ -868,7 +933,7 @@
 
             <div class="skill-card">
 
-                <div class="skill-icon csharp-icon">
+                <div class="skill-icon">
                     C#
                 </div>
 
@@ -902,6 +967,7 @@
 
             </div>
 
+
         </div>
 
     </section>
@@ -911,9 +977,7 @@
          PROJECTS
     ========================= -->
 
-    <section
-        class="projects"
-        id="projects">
+    <section class="projects" id="projects">
 
         <div class="section-title">
 
@@ -931,9 +995,18 @@
         <div class="project-container">
 
 
-            <!-- PROJECT 1 -->
+            <!-- =========================
+                 PROJECT 1
+            ========================= -->
 
             <div class="project-card">
+
+                <!-- PROJECT 1 IMAGE -->
+
+                <img
+                    src="images/Screenshot 2026-08-18 055810.png"
+                    alt="Personal Portfolio Project"
+                    class="project-image">
 
                 <div class="project-number">
                     PROJECT 01
@@ -964,9 +1037,18 @@
             </div>
 
 
-            <!-- PROJECT 2 -->
+            <!-- =========================
+                 PROJECT 2
+            ========================= -->
 
             <div class="project-card">
+
+                <!-- PROJECT 2 IMAGE -->
+
+                <img
+                    src="images/Screenshot 2026-08-18 055206.png"
+                    alt="Library Management System Project"
+                    class="project-image">
 
                 <div class="project-number">
                     PROJECT 02
@@ -984,7 +1066,7 @@
                 <div class="project-tags">
 
                     <span class="tag">
-                        C++
+                        C#
                     </span>
 
                     <span class="tag">
@@ -996,9 +1078,18 @@
             </div>
 
 
-            <!-- PROJECT 3 -->
+            <!-- =========================
+                 PROJECT 3
+            ========================= -->
 
             <div class="project-card">
+
+                <!-- PROJECT 3 IMAGE -->
+
+                <img
+                    src="images/Screenshot 2026-08-18 055644.png"
+                    alt="Student Information System Project"
+                    class="project-image">
 
                 <div class="project-number">
                     PROJECT 03
@@ -1016,7 +1107,7 @@
                 <div class="project-tags">
 
                     <span class="tag">
-                        C#
+                        C++
                     </span>
 
                     <span class="tag">
@@ -1037,9 +1128,7 @@
          EXPERIENCE
     ========================= -->
 
-    <section
-        class="experience"
-        id="experience">
+    <section class="experience" id="experience">
 
         <div class="section-title">
 
@@ -1133,6 +1222,7 @@
 
             </div>
 
+
         </div>
 
     </section>
@@ -1185,6 +1275,7 @@
     <footer>
 
         © 2026
+
         <span>
             Christian Dave C. Flores
         </span>
